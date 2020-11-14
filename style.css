@@ -14,4 +14,9 @@ html{
 }
 body{
     font-size: 1.6rem;
+    height: 100vh;
+    background-color: var(--Dark_cyan);
+    background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: top -50rem left -35rem, bottom -65rem right -25rem;
 }
