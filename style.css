@@ -125,3 +125,23 @@ body{
     margin-top: 0.4rem;
 }
 /* end of footer div */
+
+
+
+/* for mobile */
+@media screen and (max-width: 900px) {
+    body{
+        background-position: top -25rem left -35rem, bottom -30rem right -40rem;
+        background-size: 60rem 62rem,62rem 62rem;
+    }
+
+    .container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .footer_div{
+        padding: 3rem 3rem;      
+    }
+}
