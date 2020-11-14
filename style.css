@@ -4,6 +4,7 @@
 --dark_desaturated_blue: hsl(229, 23%, 23%);
 --Dark_grayish_blue: hsl(227, 10%, 46%);
 --Dark_gray: hsl(0, 0%, 59%);
+--white: #fff;
 
 --font_400: 400;
 --font_700: 700;
@@ -12,11 +13,115 @@ font-family: 'Kumbh Sans', sans-serif;
 html{
     font-size: 62.5%;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ /* for background images in body */
 body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.6rem;
     height: 100vh;
     background-color: var(--Dark_cyan);
     background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
     background-repeat: no-repeat;
     background-position: top -50rem left -35rem, bottom -65rem right -25rem;
+    position: relative;
 }
+
+.attribution{
+    position: absolute;
+    bottom: 1rem;
+}
+
+.container{
+    max-width: 35rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+
+/* top header div with background image */
+.top_background_div, .center_div{
+    width: 100%;
+    height: 15rem;
+}
+.top_background_div{
+    background-image: url(/images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top_background_div img{
+    position: absolute;
+    bottom: -50%;
+    transform: translateY(-25%);
+    border-radius: 50%;
+    z-index: 1;
+    border: 0.5rem solid var(--white);
+}
+/* end of top div */
+
+
+/* center div with user info */
+.center_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-bottom: 0.1rem solid var(--Dark_gray);
+}
+
+.center_div .info{
+    margin-top: 4rem;
+}
+
+.info #user_name, .amount{
+    font-weight: var(--font_700);
+    font-size: 1.8rem;
+    color: var(--dark_desaturated_blue);
+}
+
+.info #age{
+    margin-left: 0.5rem;
+    color: var(--Dark_grayish_blue);
+    font-size: 1.8rem;
+    font-weight: var(--font_400);
+}
+.center_div #city{
+    margin-top: 1rem;
+    color: var(--Dark_gray);
+    font-size: 1.4rem;
+    font-weight: var(--font_700);
+}
+
+/* end of center div */
+
+
+
+/* footer div with followers and etc */
+.footer_div{
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 5rem;
+    text-align: center;
+}
+
+.desc{
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    color: var(--Dark_gray);
+    margin-top: 0.4rem;
+}
+/* end of footer div */
